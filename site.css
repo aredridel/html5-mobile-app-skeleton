@@ -1,0 +1,53 @@
+@media (min-width: 641px) {
+	label[for=nav] { display: none }
+	nav > dl {
+		display: grid;
+	}
+}
+
+@media (max-width: 640px) {
+	/* Functionality: hide and show the navigation */
+	#nav:not(:checked) + nav { visibility: hidden; }
+	label[for=nav] { cursor: pointer; font-size: 200%; visibility: hidden; }
+	label[for=nav].close::before { content: "×"; visibility: visible}
+	label[for=nav].open::before { content: "≡"; visibility: visible}
+
+	html, body { height: 100%; margin: 0; }
+	body {
+		display: grid;
+		grid-template-columns: [fullscreen-start header-start main-start] 1fr [main-end header-end fullscreen-end];
+		grid-template-rows: [fullscreen-start header-start] auto [header-end main-start] 1fr [main-end fullscreen-end];
+   	}
+	main { overflow: auto; grid-area: main; margin: 1em }
+	header { grid-area: header; margin: 1em; }
+
+	/* Functionality: navigation is full-screen on mobile */
+	nav { grid-area: fullscreen; z-index: 1; }
+}
+
+header { display: grid; grid-template-columns: 1fr [logo-start] auto [logo-end] 1fr; grid-template-rows: [logo-start] auto [logo-end] }
+.logo { grid-area: logo; }
+
+/* Presentation: Color on the navigation */
+nav { background-color: rebeccapurple; color: var(--color); --color: white; padding: 1em; }
+body { font-size: 20px; color: var(--color); --color: black; background-color: white; }
+a { color: var(--color); }
+
+/* Presentation: animation for the menu */
+@media (max-width: 640px) {
+	#nav:not(:checked) ~ nav { transform: translateX(-100%); }
+	nav { transition: transform 200ms ease-in-out, visibility 200ms ease-in-out; transform: translateX(0); }
+}
+
+.show-on-focus:not(:focus):not(:focus-within) {
+	margin: 0;
+	clip: rect(1px,1px,1px,1px);
+	position: absolute;
+}
+
+/* Presentation: font sizing */
+
+h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3, h4, h5, h6 { font-size: 1rem; }

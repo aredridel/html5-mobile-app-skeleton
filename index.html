@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <!-- This goes early so browsers don't have to reinterpret the page if it's not what they expect -->
+    <meta charset="utf-8">
+    <!-- Phones are silly so we tell them they are allowed not to be -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="site.css">
+    <title>HTML5 Mobile App Skeleton</title>
+  </head>
+  <body>
+    <!-- A checkbox for the navigation visibility state. It's simple and it works. The labels are what manipulate it though. -->
+    <input type="checkbox" id="nav" hidden>
+    <header>
+      <label for="nav" class="open" tabindex="1">Show navigation</label>
+      <h1 class="logo">Logo Here</h1>
+    </header>
+    <nav>
+      <a href="#main" class="show-on-focus" tabindex="1">Skip navigation</a>
+      <label for="nav" class="close" tabindex="1">Close</label>
+      <dl>
+        <dt>Category</dt>
+        <dd><a href="#">Link</a></dd>
+        <dd><a href="#">Link</a></dd>
+        <dd><a href="#">Link</a></dd>
+        <dt>Category</dt>
+        <dd><a href="#">Link</a></dd>
+        <dd><a href="#">Link</a></dd>
+        <dd><a href="#">Link</a></dd>
+      </dl>
+    </nav>
+    <main id="main">
+      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. 
+
+      Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante, eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. Metus fringilla nec ullamcorper odio aliquam lacinia conubia mauris tempor, etiam ultricies proin quisque lectus sociis id tristique, integer phasellus taciti pretium adipiscing tortor sagittis ligula. 
+
+      Mollis pretium lorem primis senectus habitasse lectus scelerisque donec, ultricies tortor suspendisse adipiscing fusce morbi volutpat pellentesque, consectetur mi risus molestie curae malesuada cum. Dignissim lacus convallis massa mauris enim ad mattis magnis senectus montes, mollis taciti phasellus accumsan bibendum semper blandit suspendisse faucibus nibh est, metus lobortis morbi cras magna vivamus per risus fermentum. Dapibus imperdiet praesent magnis ridiculus congue gravida curabitur dictum sagittis, enim et magna sit inceptos sodales parturient pharetra mollis, aenean vel nostra tellus commodo pretium sapien sociosqu.</p>
+    </main>
+  </body>
+</html>
